@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header CSS ────────────────────────────────────────────────────*/
+
+/*상단 CPK*/
+header {
+    position: relative;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+    
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+/*버튼*/
+.auth-buttons {
+    position: absolute;
+    top: 10px;
+    right: 20PX;
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.auth-buttons a:hover {
+    background-color: #0056b3;
+}
+
+/*상단 이미지*/
+.header-image {
+    width: 50%;
+    height: 50px; /* Adjust height as needed */
+    background-image: url('your-image-path.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header CSS──────────────────────────────────────────────────────*/
+
+
+/* TOP MENU CSS──────────────────────────────────────────────────────*/
+
+.topmenu {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 30px; /* Adjust spacing between menu items */
+}
+
+.topmenu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.topmenu a:hover {
+    color: #f0c040;
+}
+
+/* TOP MENU CSS ──────────────────────────────────────────────────────*/
+
+/* Login CSS ──────────────────────────────────────────────────────*/
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
