@@ -7,17 +7,152 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1><a href="index.html">CPK</a></h1>
-        <div class="header-image"></div>
-    </header>
-    <nav class="topmenu">
-        <a href="notice.html">공지사항</a>
-        <a href="hr.html">인사관리</a>
-        <a href="education.html">교육관리</a>
-        <a href="construction1.html">공사중</a>
-        <a href="construction2.html">공사중</a>
-    </nav>
+<!-- 상단 메뉴 ------------------------------------------------------>
+<header>
+    <h1><a href="index.html">CPK</a></h1> 
+    <div class="auth-buttons">
+        <a href="login.html">로그인</a>
+        <a href="signup.html">회원가입</a>
+    </div>
+</header>
+
+<nav class="topmenu">
+    <a href="notice.html">공지사항</a>
+    <a href="hr.html">인사관리</a>
+    <a href="education.html">교육관리</a>
+    <a href="construction1.html">공사중</a>
+    <a href="construction2.html">공사중</a>
+</nav>
+<!-- 상단 메뉴 ------------------------------------------------------>
+ 
+
+<!--사이드 메뉴------------------------------------------------------>
+<div>
+    <div class="sidebar">
+        <button onclick="toggleSubmenu('submenu1')">인사정보</button>
+        <div id="submenu1" class="submenu">
+            <button>인사입력</button>
+            <button>관리부</button>
+            <button>화물조업부</button>
+            <button>여객조업부</button>
+            <button>미화부</button>
+        </div>
+        <button>근무정보</button>
+        <button>연차정보</button>
+</div>
+<!--사이드 메뉴------------------------------------------------------>
+<div>
+    <form>
+        <!-- 기본사항 -->
+        <div class="section">
+            <h2>기본사항</h2>
+            <label for="department">부서명</label>
+            <input type="text" id="department" name="department">
+
+            <label for="position">직급</label>
+            <input type="text" id="position" name="position">
+
+            <label for="join_date">입사일</label>
+            <input type="date" id="join_date" name="join_date">
+
+            <label for="name">성명</label>
+            <input type="text" id="name" name="name">
+
+            <label for="leave_date">퇴사일</label>
+            <input type="date" id="leave_date" name="leave_date">
+
+            <label for="address">주소</label>
+            <input type="text" id="address" name="address">
+
+            <label for="contact">연락처</label>
+            <input type="text" id="contact" name="contact">
+
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email">
+
+            <label for="id_number">주민등록번호</label>
+            <input type="text" id="id_number" name="id_number">
+        </div>
+
+        <!-- 인적사항 -->
+        <div class="section">
+            <h2>인적사항</h2>
+            <label for="blood_type">혈액형</label>
+            <select id="blood_type" name="blood_type">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="AB">AB</option>
+                <option value="O">O</option>
+            </select>
+
+            <label for="military">병역</label>
+            <input type="text" id="military" name="military">
+
+            <label for="marital_status">결혼여부</label>
+            <select id="marital_status" name="marital_status">
+                <option value="married">기혼</option>
+                <option value="single">미혼</option>
+            </select>
+
+            <label for="remarks">비고</label>
+            <textarea id="remarks" name="remarks"></textarea>
+        </div>
+
+        <!-- 가족관계 -->
+        <div class="section">
+            <h2>가족관계</h2>
+            <label for="relation">관계</label>
+            <input type="text" id="relation" name="relation">
+
+            <label for="family_name">성명</label>
+            <input type="text" id="family_name" name="family_name">
+
+            <label for="birth_date">생년월일</label>
+            <input type="date" id="birth_date" name="birth_date">
+
+            <label for="family_remarks">비고</label>
+            <textarea id="family_remarks" name="family_remarks"></textarea>
+            <button type="button" onclick="addFamilyField()">+ 추가</button>
+        </div>
+
+        <!-- 경력사항 -->
+        <div class="section">
+            <h2>경력사항</h2>
+            <label for="company_name">회사명</label>
+            <input type="text" id="company_name" name="company_name">
+
+            <label for="work_period">근무기간</label>
+            <input type="text" id="work_period" name="work_period">
+
+            <label for="position">직책</label>
+            <input type="text" id="work_position" name="work_position">
+
+            <label for="job">담당업무</label>
+            <textarea id="job" name="job"></textarea>
+            <button type="button" onclick="addWorkField()">+ 추가</button>
+        </div>
+
+        <button type="button" onclick="saveEmployeeData()">저장</button>
+        <button type="reset">취소</button>
+    </form>
+</div>
+
+
+
+
+<script>
+//------사이드 메뉴 누르면 들여쓰기 ---------------------------// 
+    function toggleSubmenu(id) {
+        const submenu = document.getElementById(id);
+        if (submenu.style.display === "block") {
+            submenu.style.display = "none";
+        } else {
+            submenu.style.display = "block";
+        }
+    }
+//------사이드 메뉴 누르면 들여쓰기 --------------------------// 
+
+</script>
 
     <a href="index.html">메인으로 돌아가기</a>
 </body>

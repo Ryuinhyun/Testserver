@@ -92,3 +92,37 @@ header a {
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    /* HR Side Menu CSS ──────────────────────────────────────────────────────*/
+    .sidebar {
+        float: left;
+        width: 20%; /* Sidebar의 너비 */
+        padding: 10px;
+        border-right: 1px solid #ccc;
+        height: 100vh; /* Sidebar가 전체 높이를 차지하도록 설정 */
+        box-sizing: border-box;
+    }
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    text-align: left;
+    background: #f4f4f4;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.sidebar button:hover {
+    background: #ddd;
+}
+.submenu {
+    display: none;
+    margin-left: 20px;
+}
+.submenu button {
+    background: #e9e9e9;
+    margin: 3px 0;
+}
